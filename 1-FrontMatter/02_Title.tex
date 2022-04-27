@@ -1,0 +1,76 @@
+%% The following lines force creates an empty page before the titlepage
+\thispagestyle{empty}
+\vspace{2cm}
+\begin{center}
+    This page is intentionally left blank.
+\end{center}
+\newpage
+
+
+%% The following lines actually make the title page
+\begin{titlepage}
+
+
+\begin{center}
+
+%% Insert the TU Delft logo at the bottom of the page.
+
+%% Print the title in cyan.
+{\makeatletter
+\largetitlestyle\fontsize{64}{94}\selectfont\@title
+%\largetitlestyle\color{tudelft-cyan}\Huge\@title
+\makeatother}
+
+%% Print the optional subtitle in black.
+{\makeatletter
+\ifx\@subtitle\undefined\else
+    \bigskip
+   {\tudsffamily\fontsize{22}{32}\selectfont\@subtitle}    
+    %\titlefont\titleshape\LARGE\@subtitle
+\fi
+\makeatother}
+
+\bigskip
+\bigskip
+
+by
+%door
+
+\bigskip
+\bigskip
+
+%% Print the name of the author.
+{\makeatletter
+%\largetitlefont\Large\bfseries\@author
+\largetitlestyle\fontsize{26}{26}\selectfont\@author
+\makeatother}
+
+\bigskip
+\bigskip
+
+to pass the <course number> course
+
+
+at the Delft University of Technology,
+
+
+\vfill
+
+\begin{tabular}{lll}
+    Project duration: & \multicolumn{2}{l}{March 1, 2012 -- January 1, 2013} \\
+    Thesis committee: & Prof.\ dr.\ ir.\ J.\ Doe, & TU Delft, supervisor \\
+        & Dr.\ E.\ L.\ Brown, & TU Delft \\
+        & Ir.\ A.\ Aaronson, & Acme Corporation
+\end{tabular}
+
+
+\end{center}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \node at (current page.south)[anchor=south,inner sep=0pt]{
+        \includegraphics{cover/logo}
+    };
+\end{tikzpicture}
+
+\end{titlepage}
+

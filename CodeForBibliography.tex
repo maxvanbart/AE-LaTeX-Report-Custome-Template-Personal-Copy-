@@ -1,0 +1,230 @@
+Find the type of source you used, then copy the corresponding code and fill in all required fields and optional field if possible.
+Remove all unused fields, the last comma and all comments!
+Paste the code in the bibliography.bib file
+IMPORTANT: Any field that does not have a optional behind it is mandatory
+IMPORTANT: Fields with a "or ..." behind it can be interchanged with the other mentioned field but only one can be used.
+
+article
+    Article from a magazine or journal
+
+book
+    A published book
+
+booklet
+    A work that is printed but has no publisher or sponsoring institution
+
+conference
+    An article in a conference proceedings (see inproceedings code)
+
+inbook
+    A part of a book (section, chapter and so on)
+
+incollection
+    A part of a book having its own title
+
+inproceedings
+    An article in a conference proceedings
+
+manual
+    Technical documentation
+
+mastersthesis
+    A Master's thesis
+
+misc
+    Something that doesn't fit in any other type
+
+phdthesis
+    A PhD thesis
+
+proceedings
+    The same as conference
+
+techreport
+    Report published by an institution or school
+
+unpublished
+    Document not formally published, with author and title
+
+
+
+
+Code for bibliography file:
+    
+@article{*Source Name*,
+    author      = "",
+    title       = "",
+    journal     = "",
+    year        = "",
+    volume      = "",   %optional
+    number      = "",   %optional
+    pages       = "",   %optional
+    month       = "",   %optional
+    note        = "",   %optional
+    url         = "",   %optional
+}
+
+@book{*Source Name*,
+    author      = "",   %or editor
+    editor      = "",   %or author
+    title       = "",
+    publisher   = "",
+    year        = "",
+    volume      = "",   %optional %or number
+    number      = "",   %optional %or volume
+    series      = "",   %optional
+    address     = "",   %optional
+    edition     = "",   %optional
+    month       = "",   %optional
+    note        = "",   %optional
+    url         = "",   %optional    
+}
+
+@booklet{*Source Name*,
+    title           = "",
+    author          = "",
+    howpublished    = "",
+    address         = "",   %optional
+    month           = "",   %optional
+    year            = "",   %optional
+    note            = "",   %optional
+    url             = "",   %optional    
+}
+
+@inbook{*Source Name*,
+    author      = "",   %or editor
+    editor      = "",   %or author
+    title       = "",
+    chapter     = "",
+    pages       = "",
+    publisher   = "",
+    year        = "",
+    volume      = "",   %optional %or number
+    number      = "",   %optional %or volume
+    series      = "",   %optional
+    address     = "",   %optional
+    edition     = "",   %optional
+    month       = "",   %optional
+    note        = "",   %optional
+    url         = "",   %optional    
+}
+
+@incollection{*Source Name*,
+    author      = "",
+    title       = "",
+    booktitle   = "",
+    publisher   = "",
+    year        = "",
+    editor      = "",   %optional
+    volume      = "",   %optional %or number
+    number      = "",   %optional %or volume
+    series      = "",   %optional
+    type        = "",   %optional
+    chapter     = "",   %optional
+    pages       = "",   %optional
+    address     = "",   %optional
+    edition     = "",   %optional
+    month       = "",   %optional
+    note        = "",   %optional
+    url         = "",   %optional    
+}
+
+@inproceedings{*Source Name*,
+    author      = "",
+    title       = "",
+    booktitle   = "",
+    year        = "",
+    editor      = "",   %optional
+    volume      = "",   %optional %or number
+    number      = "",   %optional %or volume
+    series      = "",   %optional
+    pages       = "",   %optional
+    address     = "",   %optional
+    month       = "",   %optional
+    note        = "",   %optional
+    publisher   = "",   %optional    
+    url         = "",   %optional    
+}
+
+@manual{*Source Name*,
+    title           = "",
+    author          = "",   %optional
+    organization    = "",   %optional
+    address         = "",   %optional
+    edition         = "",   %optional
+    month           = "",   %optional
+    year            = "",   %optional
+    note            = "",   %optional
+    url             = "",   %optional    
+}
+
+@mastersthesis{*Source Name*,
+    author      = "",
+    title       = "",
+    school      = "",
+    year        = "",
+    type        = "",   %optional
+    address     = "",   %optional
+    month       = "",   %optional
+    note        = "",   %optional
+    url         = "",   %optional
+}
+
+@misc{*Source Name*,
+    author          = "",   %optional
+    title           = "",   %optional
+    howpublished    = "",   %optional
+    month           = "",   %optional
+    year            = "",
+    note            = "",   %optional
+    url             = "",   %optional
+}
+
+@phdthesis{*Source Name*,
+    author      = "",
+    title       = "",
+    school      = "",
+    year        = "",
+    type        = "",   %optional
+    address     = "",   %optional
+    month       = "",   %optional
+    note        = "",   %optional
+    url         = "",   %optional
+}
+
+@proceedings{*Source Name*,
+    title       = "",
+    year        = "",
+    editor      = "",   %optional
+    volume      = "",   %optional %or number
+    number      = "",   %optional %or volume
+    series      = "",   %optional
+    address     = "",   %optional
+    month       = "",   %optional
+    organization= "",   %optional
+    publisher   = "",   %optional    
+    note        = "",   %optional
+    url         = "",   %optional   
+}
+
+@techreport{*Source Name*,
+    author      = "",
+    title       = "",
+    institution = "",
+    year        = "",
+    type        = "",   %optional
+    number      = "",   %optional
+    address     = "",   %optional
+    month       = "",   %optional
+    note        = "",   %optional
+    url         = "",   %optional
+}
+
+@unpublished{*Source Name*,
+    author      = "",
+    title       = "",
+    note        = "",
+    year        = "",    
+    month       = "",   %optional
+    url         = "",   %optional   
+}

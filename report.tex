@@ -1,0 +1,152 @@
+%% ################### PREAMBLE ###################
+\documentclass[openany]{tudelft-AE-report}
+
+% set bibliography package, style can be changed inside the cls template document
+\usepackage[numbers,sort&compress]{natbib}
+
+% \usepackage[sorting=none, citestyle=numeric-comp, natbib=true]{biblatex}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage{varioref}
+\usepackage{cleveref}
+\usepackage{amsmath}                                % Math packages
+\usepackage{amssymb}
+\usepackage{calc}
+\usepackage{gensymb}
+\usepackage{siunitx}
+\usepackage{adjustbox}                              % Figure packages
+\usepackage[labelfont={bf}, 
+            textfont={it}, 
+            tableposition=top,
+            justification=centering]{caption}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{pgfplots}                             % Commented because of warning
+\usepackage{pgfplotstable}                        % Commented because of warning
+\usepackage{array}                                  % Table packages
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{enumitem}                               % Listing packages
+\usepackage{easylist}
+\usepackage{listings}
+\usepackage{color}
+% \usepackage{scrextend}                            % Commented as it gives an error
+\usepackage{changes}                                % Text packages
+\usepackage{comment}
+\usepackage{fancyvrb}
+\usepackage{lipsum}
+\usepackage{textcomp}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage{geometry}                               % Miscellaneous packages
+\usepackage{nomencl}
+\usepackage{pdfpages}
+
+\pgfplotsset{width=15cm,compat=1.9}             %Required for creating plots
+
+% This prevents latex from spreading text over pages
+\raggedbottom
+% This makes white lines instead of indents
+\usepackage[parfill]{parskip}
+
+%Python
+\usepackage{xcolor}
+\usepackage{minted}
+
+
+%% Uncomment the following two lines when using the biblatex package
+% \bibliography{bibliography.bib}
+% \addbibresource{bibliography.bib}
+
+% The following add captial letters to all autoref command outputs
+\addto\extrasenglish{%
+    \def\chapterautorefname{Chapter}%
+    \def\sectionautorefname{Section}%
+    \def\subsectionautorefname{Subsection}%
+    \def\subsubsectionautorefname{Subsubsection}%
+    \def\paragraphautorefname{Paragraph}%
+    \def\subparagraphautorefname{Subparagraph}%
+    \def\equationautorefname{Equation}
+    \def\tableautorefname{Table}
+    \def\figureautorefname{Figure}
+    \def\footnoteautorefname{Footnote}
+    \def\Listautorefname{List}
+}
+
+% This is all for code listings
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{pythonCode}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+% This removes the alternating page margins caused by the used base template thingy stuff
+\geometry{total={210mm,297mm},
+left=25mm,right=25mm,
+bindingoffset=0mm, top=30mm,bottom=30mm}
+
+\begin{document}
+%% ################### FRONT MATTER ###################
+%% Use Roman numerals for the page numbers of the title pages and table of contents.
+\frontmatter
+\input{1-FrontMatter/01_Cover.tex}
+
+\makecover[whitelogo,fillboxes] %whitelogo gives a white logo in the cover remove white logo is a black logo is preffered (ignore the error)
+
+\input{1-FrontMatter/02_Title.tex}                       
+% \input{1-FrontMatter/03_Preface.tex}
+
+%% Generate the table of content
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+% \listoftables                                       % Optional list of tables.
+% \listoffigures                                      % Optional list of figures.
+%% Generate the nomenclature (optional)
+% \makenomenclature
+% \renewcommand{\nomname}{List of Symbols}            % Rename to "List of Symbols"
+% \input{1-FrontMatter/06_Nomenclature.tex}
+% \printnomenclature                                  % Include to actually display
+% \thispagestyle{empty}
+%% ################### MAIN MATTER ###################
+%% Use Arabic numerals for the page numbers of the chapters.
+%% Use this for first chapter:      \input{2-MainMatter/<File_Name>}\setcounter{page}{1}
+%% Use this for all other chapters: \input{2-MainMatter/<File_Name>}
+
+\mainmatter
+\input{2-MainMatter/1_Introduction.tex}\setcounter{page}{1}
+\input{2-MainMatter/2_Chapter_name}
+
+%% ################### BACK MATTER ###################
+%% Use letters for the chapter numbers of the appendices. (Is done automatically) 
+%% Note: when there are references in the appendices, the references should be placed below the appendices.
+\bibliography{bibliography.bib}
+
+\appendix
+%% Use this for all appendices: \input{3_Back_Matter/Appendices/<File_Name>}
+\input{3-BackMatter/Appendix_A}
+
+\end{document}

@@ -1,0 +1,36 @@
+%% This first part defines some parameters for the nomenclature and allows for the use of the \nomunit command. Start adding nomenclature entries to the lines underneath the proper group.
+%% Greek letters for physical constants and Roman letters for variables
+
+\renewcommand{\nomgroup}[1]{%
+%   \ifthenelse{\equal{#1}{R}}{\item[\textbf{Latin Symbols}]}{%
+    \ifthenelse{\equal{#1}{R}}{\item[\textbf{}]}{%
+%   \ifthenelse{\equal{#1}{G}}{\item[\textbf{Greek Symbols}]}{%
+    \ifthenelse{\equal{#1}{G}}{\item[\textbf{}]}{}}}%
+%   \ifthenelse{\equal{#1}{A}}{\item[\textbf{Abbreviations}]}{}}}\vspace{10pt}}
+%   \ifthenelse{\equal{#1}{A}}{\item[\textbf{}]}{}}}}
+
+\newcommand{\nomunit}[1]{%
+    \renewcommand{\nomentryend}{\hspace*{\fill}#1}}
+
+
+
+%% Add your nomenclature entries here. Some examples are given
+\nomenclature[0]{$ $}{\nomunit{}} % white-space between title and first list element
+
+%% Greek letters
+%% \nomenclature[g]{$\alpha$}{description\nomunit{x}}
+\nomenclature[g]{$\gamma$}{Climb angle\nomunit{deg}} %
+\nomenclature[g]{$\lambda_h$}{Horizontal tail taper ratio\nomunit{-}} %
+\nomenclature[g]{$\Lambda_{0.25h}$}{Horizontal tail quarter chord sweep\nomunit{deg}} %
+\nomenclature[g]{$\rho$}{Density\nomunit{kg/m\textsuperscript{3}}} %
+
+
+
+
+%% Roman letters
+%% \nomenclature[r]{$x$}{description\nomunit{y}}
+\nomenclature[r]{$a$}{Speed of sound\nomunit{m/s}} %
+\nomenclature[r]{$c_t$}{Chord length at tip\nomunit{m}} %
+\nomenclature[r]{$c_r$}{Chord length at root\nomunit{m}} %
+\nomenclature[r]{$b$}{Wing span\nomunit{m}} %
+\nomenclature[r]{$C_{m_{ac}}$}{Pitching moment around the aerodynamic centre \nomunit{-}} %
