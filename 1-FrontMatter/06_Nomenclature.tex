@@ -5,9 +5,9 @@
 %   \ifthenelse{\equal{#1}{R}}{\item[\textbf{Latin Symbols}]}{%
     \ifthenelse{\equal{#1}{R}}{\item[\textbf{}]}{%
 %   \ifthenelse{\equal{#1}{G}}{\item[\textbf{Greek Symbols}]}{%
-    \ifthenelse{\equal{#1}{G}}{\item[\textbf{}]}{}}}%
+    \ifthenelse{\equal{#1}{G}}{\item[\textbf{}]}{%
 %   \ifthenelse{\equal{#1}{A}}{\item[\textbf{Abbreviations}]}{}}}\vspace{10pt}}
-%   \ifthenelse{\equal{#1}{A}}{\item[\textbf{}]}{}}}}
+    \ifthenelse{\equal{#1}{A}}{\item[\textbf{}]}{}}}}
 
 \newcommand{\nomunit}[1]{%
     \renewcommand{\nomentryend}{\hspace*{\fill}#1}}
@@ -34,3 +34,6 @@
 \nomenclature[r]{$c_r$}{Chord length at root\nomunit{m}} %
 \nomenclature[r]{$b$}{Wing span\nomunit{m}} %
 \nomenclature[r]{$C_{m_{ac}}$}{Pitching moment around the aerodynamic centre \nomunit{-}} %
+
+\renewcommand{\nompreamble}{\begin{multicols}{2}}
+\renewcommand{\nompostamble}{\end{multicols}}
